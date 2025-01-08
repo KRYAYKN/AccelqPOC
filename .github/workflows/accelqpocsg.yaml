@@ -2,8 +2,8 @@ name: Business Central AccelqPoc
 on:
   workflow_dispatch:
 env:
-  GLASS_SALES_REGRESSION_ACCELQ_JOB_ID: "774"
-  AGENT_1: "preprod_docker_agent_1"
+  GLASS_SALES_REGRESSION_ACCELQ_JOB_ID: "451819"
+  AGENT_1: "SGBCPOCAgent"
   DOCKER_NAME: "accelq_agent"
   TENANT_CODE: "poc25"
   FAILURE_THRESHOLD: 80
