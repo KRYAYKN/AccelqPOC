@@ -11,7 +11,7 @@ env:
   TENANT_CODE: "poc25"
   FAILURE_THRESHOLD: 80
 jobs:  
-  run-sgis-service-regression-tests:
+  Accelq_BC_POC_Test:
     # runs-on: ubuntu-latest
     runs-on: ubuntu-latest
     steps:
