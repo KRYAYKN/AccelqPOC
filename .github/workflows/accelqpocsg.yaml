@@ -1,0 +1,33 @@
+name: Business Central AccelqPoc
+on:
+  workflow_dispatch:
+env:
+  GLASS_SALES_REGRESSION_ACCELQ_JOB_ID: "774"
+  AGENT_1: "preprod_docker_agent_1"
+  DOCKER_NAME: "accelq_agent"
+  TENANT_CODE: "poc25"
+  FAILURE_THRESHOLD: 80
+jobs:  
+  run-sgis-service-regression-tests:
+    # runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Build AccelQ Agent Container Image
+      run: |
+        docker build -f config/Dockerfile --build-arg USER_ID=${{ secrets.USER_ID }} --build-arg API_KEY=${{ secrets.API_KEY }} -t ${{env.DOCKER_NAME}} .
+    - name: Start AccelQ Agent Container
+      run: |
+        docker run -d -e agent_name=${{env.AGENT_1}} --name ${{env.DOCKER_NAME}} ${{env.DOCKER_NAME}} &
+    - name: AccelQ Script Execution using Github-A Connect
+      uses: ravin-accelq/accelq-ci-github-actions@v1.4
+      with:
+        appURL: "https://poc.accelq.io/"
+        userName: "${{ secrets.USER_ID }}"
+        apiKey: "${{ secrets.API_KEY }}"
+        tenantCode: ${{env.TENANT_CODE}}
+        jobId: ${{env.GLASS_SALES_REGRESSION_ACCELQ_JOB_ID}}
+        stepFailureThreshold: ${{env.FAILURE_THRESHOLD}}
+    - name: cleanup
+      run: docker rm -f ${{env.DOCKER_NAME}}
