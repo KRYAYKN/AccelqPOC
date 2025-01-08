@@ -2,7 +2,7 @@ name: Business Central AccelqPoc
 on:
   workflow_dispatch:
 env:
-  GLASS_SALES_REGRESSION_ACCELQ_JOB_ID: "451819"
+  SALESORDER_CREATION_JOB_ID: "451819"
   AGENT_1: "SGBCPOCAgent"
   DOCKER_NAME: "accelq_agent"
   TENANT_CODE: "poc25"
@@ -27,7 +27,7 @@ jobs:
         userName: "${{ secrets.USER_ID }}"
         apiKey: "${{ secrets.API_KEY }}"
         tenantCode: ${{env.TENANT_CODE}}
-        jobId: ${{env.GLASS_SALES_REGRESSION_ACCELQ_JOB_ID}}
+        jobId: ${{env.SALESORDER_CREATION_JOB_ID}}
         stepFailureThreshold: ${{env.FAILURE_THRESHOLD}}
     - name: cleanup
       run: docker rm -f ${{env.DOCKER_NAME}}
