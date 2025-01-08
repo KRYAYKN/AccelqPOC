@@ -1,6 +1,9 @@
 name: Business Central AccelqPoc
 on:
-  workflow_dispatch:
+  #workflow_dispatch:
+    push:
+        branches:
+          - main
 env:
   SALESORDER_CREATION_JOB_ID: "451819"
   AGENT_1: "SGBCPOCAgent"
