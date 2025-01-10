@@ -1,7 +1,7 @@
 name: Business Central AccelqPoc
 on:
-  #workflow_dispatch:
-    push:
+  workflow_dispatch:
+  push:
         branches:
           - main
 env:
