@@ -2,8 +2,8 @@ name: Business Central AccelqPoc
 on:
   workflow_dispatch:
   push:
-        branches:
-          - main
+    branches:
+      - main
 env:
   SALESORDER_CREATION_JOB_ID: "452286"
   AGENT_1: "SGBCPOCAgent1"
@@ -12,8 +12,8 @@ env:
   FAILURE_THRESHOLD: 80
 jobs:  
   Accelq_BC_POC_Test:
-    # runs-on: ubuntu-latest
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+   # runs-on: ubuntu-20.04
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -35,4 +35,4 @@ jobs:
     - name: cleanup
       run: docker rm -f ${{env.DOCKER_NAME}}
 
-      #dddddddd
+      #dddddddddd
