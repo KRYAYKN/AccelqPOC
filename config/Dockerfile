@@ -1,7 +1,7 @@
 # Use the base image
 FROM accelq/accelq-agent
 # Set environment variables
-ENV agent_name=SGBCPOCAgent \
+ENV agent_name=SGBCPOCAgent1 \
     num_concurrent_jobs=1 \
     num_parallel_tc_per_job=3 \
     accelq_server_url=https://poc.accelq.io/ \

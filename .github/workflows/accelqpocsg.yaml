@@ -6,7 +6,7 @@ on:
           - main
 env:
   SALESORDER_CREATION_JOB_ID: "452234"
-  AGENT_1: "SGBCPOCAgent"
+  AGENT_1: "SGBCPOCAgent1"
   DOCKER_NAME: "accelq_agent"
   TENANT_CODE: "poc25"
   FAILURE_THRESHOLD: 80
