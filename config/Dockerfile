@@ -4,7 +4,7 @@ FROM accelq/accelq-agent
 ENV agent_name=Cloud_Agent_1 \
     num_concurrent_jobs=1 \
     num_parallel_tc_per_job=3 \
-    accelq_server_url=https://saint-gobain.accelq.io// \
+    accelq_server_url=https://saint-gobain.accelq.io/ \
     project_code=FormulaERPMigration \
     tenant_code=saintgobain \
     sharing_type=1 \
@@ -17,4 +17,4 @@ ARG API_KEY
 ENV user_id=$USER_ID \
     api_key=$API_KEY
 
-    #dddd
+    #ddddd
