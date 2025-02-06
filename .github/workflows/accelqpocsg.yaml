@@ -1,14 +1,14 @@
-name: Business Central AccelqPoc
+name: Business Central Accelq CI
 on:
   workflow_dispatch:
   push:
     branches:
       - main
 env:
-  SALESORDER_CREATION_JOB_ID: "452286"
+  IMPORT_BANKSTATEMENT_JOB_ID: "12608"
   AGENT_1: "Cloud_Agent_1"
   DOCKER_NAME: "accelq_agent"
-  TENANT_CODE: "poc25"
+  TENANT_CODE: "saintgobain"
   FAILURE_THRESHOLD: 80
 jobs:  
   Accelq_BC_POC_Test:
@@ -26,11 +26,11 @@ jobs:
     - name: AccelQ Script Execution using Github-A Connect
       uses: ravin-accelq/accelq-ci-github-actions@v1.4
       with:
-        appURL: "https://poc.accelq.io/"
+        appURL: "https://saint-gobain.accelq.io/"
         userName: "${{ secrets.USER_ID }}"
         apiKey: "${{ secrets.API_KEY }}"
         tenantCode: ${{env.TENANT_CODE}}
-        jobId: ${{env.SALESORDER_CREATION_JOB_ID}}
+        jobId: ${{env.IMPORT_BANKSTATEMENT_JOB_ID}}
         stepFailureThreshold: ${{env.FAILURE_THRESHOLD}}
     - name: cleanup
       run: docker rm -f ${{env.DOCKER_NAME}}
