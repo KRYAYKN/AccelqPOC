@@ -11,7 +11,7 @@ env:
   TENANT_CODE: "saintgobain"
   FAILURE_THRESHOLD: 80
 jobs:  
-  Accelq_BC_POC_Test:
+  Accelq_BC_Upload_test:
     runs-on: ubuntu-latest
    # runs-on: ubuntu-20.04
     steps:
@@ -22,7 +22,7 @@ jobs:
         docker build -f config/Dockerfile --build-arg USER_ID=${{ secrets.USER_ID }} --build-arg API_KEY=${{ secrets.API_KEY }} -t ${{env.DOCKER_NAME}} .
     - name: Start AccelQ Agent Container
       run: |
-        docker run -d -e agent_name=${{env.AGENT_1}} --name ${{env.DOCKER_NAME}} ${{env.DOCKER_NAME}} 
+        docker run -d -e agent_name=${{env.AGENT_1}} --name ${{env.DOCKER_NAME}} ${{env.DOCKER_NAME}} &
     - name: AccelQ Script Execution using Github-A Connect
       uses: ravin-accelq/accelq-ci-github-actions@v1.4
       with:
