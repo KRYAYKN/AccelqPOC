@@ -1,5 +1,5 @@
 # Use the base image
-FROM accelq/accelq-agent
+FROM accelq/accelq-acc-agent:latest
 # Set environment variables
 ENV agent_name=Cloud_Agent_1 \
     num_concurrent_jobs=1 \
