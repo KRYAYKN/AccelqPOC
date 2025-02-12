@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  IMPORT_BANKSTATEMENT_JOB_ID: "12614"
+  IMPORT_BANKSTATEMENT_JOB_ID: "12801"
   AGENT_1: "Cloud_Agent_1"
   DOCKER_NAME: "accelq_agent"
   TENANT_CODE: "saintgobain"
