@@ -1,7 +1,7 @@
 # Use the base image
 FROM accelq/accelq-acc-agent:latest
 # Set environment variables
-ENV agent_name=Cloud_Agent_1 \
+ENV agent_name=github_docker_agent \
     num_concurrent_jobs=1 \
     num_parallel_tc_per_job=3 \
     accelq_server_url=https://saint-gobain.accelq.io/ \
@@ -17,4 +17,4 @@ ARG API_KEY
 ENV user_id=$USER_ID \
     api_key=$API_KEY
 
-    #ddddd
+    
