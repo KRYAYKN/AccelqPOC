@@ -6,8 +6,8 @@ on:
     branches:
       - test
 env:
-  TEST_JOB_ID: "13815"
-  AGENT_1: "Onprem_Agent_3"
+  TEST_JOB_ID: "13819"
+  AGENT_1: "Onprem_Agent_2"
   DOCKER_NAME: "accelq_agent"
   TENANT_CODE: "saintgobain"
   FAILURE_THRESHOLD: 80
@@ -24,7 +24,7 @@ jobs:
         docker build -f config/Dockerfile --build-arg USER_ID=${{ secrets.USER_ID }} --build-arg API_KEY=${{ secrets.API_KEY }} -t ${{env.DOCKER_NAME}} .
     - name: Start AccelQ Agent Container
       run: |
-        docker run -d -e agent_name=${{env.AGENT_3}} --name ${{env.DOCKER_NAME}} ${{env.DOCKER_NAME}} &
+        docker run -d -e agent_name=${{env.AGENT_1}} --name ${{env.DOCKER_NAME}} ${{env.DOCKER_NAME}} &
     - name: AccelQ Script Execution using Github-A Connect
       uses: ravin-accelq/accelq-ci-github-actions@v1.4
       with:
