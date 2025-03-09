@@ -1,7 +1,7 @@
 name: Business Central Accelq CI
 on:
-  schedule:
-    - cron: "30 8 * * *"  # Runs every day at 8:30 AM UTC (-3 for turkish time)
+ # schedule:
+  #  - cron: "30 8 * * *"  # Runs every day at 8:30 AM UTC (-3 for turkish time)
   workflow_dispatch:
  # push:
   #  branches:
