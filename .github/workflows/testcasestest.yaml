@@ -3,8 +3,8 @@ on:
 
   workflow_dispatch:
   push:
-    branches:
-      - test
+   # branches:
+    #  - test
 env:
   TEST_JOB_ID: "13815"
   AGENT_1: "Onprem_Agent_2"
