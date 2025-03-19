@@ -4,8 +4,8 @@ on:
    # - cron: "30 8 * * *"  # Runs every day at 8:30 AM UTC (-3 for turkish time)
   workflow_dispatch:
   push:
-    branches:
-      - main
+ #   branches:
+  #    - main
 env:
   UK_REGRESSION_SUITE_JOB_ID: "13571"
   GERMANY_REGRESSION_SUITE_JOB_ID: "13570"
