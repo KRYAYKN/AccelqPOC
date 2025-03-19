@@ -2,7 +2,7 @@ name: Business Central Accelq CI
 on:
 
   workflow_dispatch:
-  push:
+  #push:
    # branches:
       #- test
 env:
