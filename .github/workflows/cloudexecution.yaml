@@ -2,9 +2,9 @@ name: Business Central Accelq CI
 on:
 
   workflow_dispatch:
-  push:
-    branches:
-      - test
+ # push:
+    #branches:
+    #  - test
 env:
   TEST_JOB_ID: "14207"
   AGENT_1: "Cloud_Agent_1"
