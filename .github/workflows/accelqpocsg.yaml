@@ -4,11 +4,11 @@ on:
     - cron: "30 8 * * *"  # Runs every day at 8:30 AM UTC (-3 for turkish time)
   workflow_dispatch:
   push:
- #   branches:
-  #    - main
+    branches:
+      - main
 env:
-  UK_REGRESSION_SUITE_JOB_ID: "14283"
-  GERMANY_REGRESSION_SUITE_JOB_ID: "14284"
+  UK_REGRESSION_SUITE_JOB_ID: "14619"
+  GERMANY_REGRESSION_SUITE_JOB_ID: "14618"
   AGENT_1: "Onprem_Agent_3"
   AGENT_2: "Onprem_Agent_2"
   DOCKER_NAME: "accelq_agent"
@@ -67,4 +67,4 @@ jobs:
     - name: cleanup
       run: docker rm -f ${{env.DOCKER_NAME}}              
 
-      #dd
+      #dddd
