@@ -1,4 +1,4 @@
-name: Business Central Accelq CI
+name: Business Central Accelq CI cronjob
 on:
   schedule:
     - cron: "30 8 * * *"  # Runs every day at 8:30 AM UTC (-3 for turkish time)
