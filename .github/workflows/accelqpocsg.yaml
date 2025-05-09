@@ -1,12 +1,12 @@
 name: Business Central Accelq CI cronjob
 
 on:
-  schedule:
-    - cron: "30 8 * * *"  # 08:30 UTC (11:30 Türkiye saati)
+  #schedule:
+   # - cron: "30 8 * * *"  # 08:30 UTC (11:30 Türkiye saati)
   workflow_dispatch:
   push:
     branches:
-      - main
+      - test
 
 env:
   UK_REGRESSION_SUITE_JOB_ID: "14619"
