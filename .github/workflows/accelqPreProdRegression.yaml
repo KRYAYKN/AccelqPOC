@@ -2,7 +2,7 @@ name: Business Central Accelq CI cronjob
 
 on:
   #schedule:
-   # - cron: "30 8 * * *"  # 08:30 UTC (11:30 Türkiye saati)
+   # - cron: "30 8 * * *"  # 08:30 UTC (11:30 Tr)
   workflow_dispatch:
   push:
     branches:
