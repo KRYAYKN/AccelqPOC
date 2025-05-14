@@ -1,8 +1,8 @@
 name: Business Central Accelq QA CI cronjob
 
 on:
-  schedule:
-    - cron: "0 4 * * *"  
+ # schedule:
+   # - cron: "0 4 * * *"  
   workflow_dispatch:
   push:
     branches:
